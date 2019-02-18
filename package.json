@@ -19,7 +19,7 @@
 		"client": "cd client && npm start",
 		"start": "concurrently \"npm run server\" \"npm run client\"",
 		"seed": "node seed.js",
-		"postinstall": "cd client && npm install && npm run build && npm start"
+		"heroku-postbuild": "cd client && npm install && npm run build"
 	},
     
        "engines": {
