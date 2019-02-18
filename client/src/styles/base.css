@@ -5,5 +5,10 @@
 }
 
 body {
-  background-color: var(--light);
+ 
+  background-size:cover;
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
 }
