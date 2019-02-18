@@ -19,7 +19,7 @@
 		"client": "cd client && npm start",
 		"start": "concurrently \"npm run server\" \"npm run client\"",
 		"seed": "node seed.js",
-		"postinstall": "npm run build"
+		"postinstall": "cd client && npm install && npm run build"
 	},
     
        "engines": {
