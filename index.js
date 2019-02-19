@@ -35,7 +35,7 @@ app.use((req, res, next) => {
 });
 app.use(handle.error);
 
-if(process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === 'production'){
   //set a static folder
   app.use(express.static('client/build'));
   app.get("*", (req, res) => {
@@ -43,6 +43,10 @@ if(process.env.NODE_ENV === 'production'){
   });
 
 }
+app.get("/", function(req, res)
+{
+    res.sendFile("index.html", {"root": __dirname});
+});
 
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
