@@ -5,10 +5,10 @@ mongoose.Promise = global.Promise;
 //const MONGODB_URI = "mongodb://root:root123@ds015869.mlab.com:15869/pollapp"
 
 
-mongoose
-.connect(db)
-.then(()=> console.log('mongodb connected'))
-.catch (err => console.log(err));
+// mongoose
+// .connect(db, { useNewUrlParser: true })
+// .then(()=> console.log('mongodb connected'))
+// .catch (err => console.log(err));
 
 
 module.exports.User = require('./user');

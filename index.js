@@ -1,5 +1,6 @@
 require('dotenv').config();
-
+const mongoose = require('mongoose');
+mongoose.set('debug', true);
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -9,13 +10,13 @@ const handle = require('./handlers');
 const path = require('path')
 
 const app = express();
-const db = require('../config/keys').mongoURI;
+const db = require('./config/keys').monogoURI
 mongoose.Promise = global.Promise;
 //const MONGODB_URI = "mongodb://root:root123@ds015869.mlab.com:15869/pollapp"
 
 
 mongoose
-.connect(db)
+.connect(db, { useNewUrlParser: true })
 .then(()=> console.log('mongodb connected'))
 .catch (err => console.log(err));
 
