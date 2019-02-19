@@ -9,6 +9,16 @@ const handle = require('./handlers');
 const path = require('path')
 
 const app = express();
+const db = require('../config/keys').mongoURI;
+mongoose.Promise = global.Promise;
+//const MONGODB_URI = "mongodb://root:root123@ds015869.mlab.com:15869/pollapp"
+
+
+mongoose
+.connect(db)
+.then(()=> console.log('mongodb connected'))
+.catch (err => console.log(err));
+
 const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(bodyParser.json());
