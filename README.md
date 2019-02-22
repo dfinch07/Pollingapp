@@ -1,5 +1,8 @@
 # Every Vote Counts
 
+![](Every_Vote_Counts.gif)
+
+
 Every Vote Counts is a Polling App that can be easily shared among people to get fast and quick answers/decisions/opinions.
 
 
