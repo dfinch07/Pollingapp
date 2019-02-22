@@ -1,5 +1,6 @@
 # Every Vote Counts
 
+![](Every_Vote_Counts2.gif)
 ![](Every_Vote_Counts.gif)
 
 
